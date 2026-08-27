@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>コードゲーム</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- ==============================
+         モード選択
+         ============================== -->
+
+    <div
+        id="mode-select"
+        class="screen"
+    >
+
+        <h1>コードゲーム</h1>
+
+        <p>
+            ゲームモードを選択してください
+        </p>
+
+
+        <div class="mode-buttons">
+
+            <button id="card-mode-button">
+                カードモード
+            </button>
+
+
+            <button id="color-mode-button">
+                色分けモード
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==============================
+         カードモード
+         ============================== -->
+
+    <div
+        id="card-mode"
+        class="screen hidden"
+    >
+
+        <h1>カードモード</h1>
+
+
+        <!-- テーマ選択 -->
+
+        <div id="theme-select">
+
+            <p>
+                テーマを選択してください
+            </p>
+
+
+            <div class="theme-buttons">
+
+                <button
+                    class="theme-button"
+                    data-theme="A"
+                >
+                    ホロライブ
+                </button>
+
+
+                <button
+                    class="theme-button"
+                    data-theme="B"
+                >
+                    ホロライブ(拡張版)
+                </button>
+
+
+                <button
+                    class="theme-button"
+                    data-theme="C"
+                >
+                    未登録
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- カードゲーム -->
+
+        <div id="card-game" class="hidden">
+
+            <h2 id="selected-theme"></h2>
+
+
+            <!-- 5×5カード -->
+
+            <div
+                id="card-grid"
+                class="grid"
+            ></div>
+
+
+            <!-- リセットボタン -->
+
+            <button id="card-reset-button">
+                リセット
+            </button>
+
+
+            <!-- テーマ選択に戻る -->
+
+            <button id="theme-back-button">
+                テーマ選択に戻る
+            </button>
+
+        </div>
+
+
+        <button id="card-back-button">
+            モード選択に戻る
+        </button>
+
+    </div>
+
+
+    <!-- ==============================
+         色分けモード
+         ============================== -->
+
+    <div
+        id="color-mode"
+        class="screen hidden"
+    >
+
+        <h1>色分けモード</h1>
+
+
+        <div
+            id="color-grid"
+            class="grid"
+        ></div>
+
+
+        <!-- ゲーム終了 -->
+
+        <div
+            id="game-over"
+            class="hidden"
+        >
+
+            <h2>
+                ゲーム終了
+            </h2>
+
+
+            <button id="reset-button">
+                リセット
+            </button>
+
+        </div>
+
+
+        <button id="color-back-button">
+            モード選択に戻る
+        </button>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
